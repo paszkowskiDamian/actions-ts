@@ -3,12 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
-  "repository": {
-    "url": "https://github.com/paszkowskiDamian/actions-ts"
-  },
-  "licenses": [
-    "MIT"
-  ],
+  "author": "Damian Paszkowski",
+  "repository": "https://github.com/paszkowskiDamian/actions-ts",
+  "license": "MIT",
   "scripts": {
     "lint": "tslint --project './tsconfig.json'",
     "build": "microbundle",
@@ -16,8 +13,6 @@
     "test": "jest --config jest.config.json ./src",
     "test:watch": "jest --config jest.config.json --watch ./src"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "microbundle": "^0.4.4",
     "typescript": "^2.9.1"
