@@ -1,0 +1,16 @@
+{
+  "name": "action-ts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "microbundle": "^0.4.4",
+    "typescript": "^2.8.4"
+  }
+}
