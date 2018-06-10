@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "licenses": [
+    "MIT"
+  ],
   "scripts": {
     "lint": "tslint --project './tsconfig.json'",
     "build": "microbundle",
