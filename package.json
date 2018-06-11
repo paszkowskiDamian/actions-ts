@@ -1,6 +1,6 @@
 {
   "name": "action-ts",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Awesome type safe actions",
   "author": "Damian Paszkowski",
   "keywords": [
@@ -29,11 +29,11 @@
     "dev": "microbundle watch",
     "test": "jest --config jest.config.json ./src",
     "test:watch": "jest --config jest.config.json --watch ./src",
-    "prepare" : "npm run rebuild",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run rebuild",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "@types/jest": "^23.0.0",
