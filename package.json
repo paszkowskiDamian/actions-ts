@@ -18,14 +18,14 @@
     "test:watch": "jest --config jest.config.json --watch ./src"
   },
   "devDependencies": {
-    "microbundle": "^0.4.4"
-  },
-  "dependencies": {
-    "typescript": "^2.9.1",
+    "microbundle": "^0.4.4",
     "@types/jest": "^23.0.0",
     "jest": "^23.1.0",
     "prettier": "^1.13.5",
     "ts-jest": "^22.4.6",
     "tslint": "^5.10.0"
+  },
+  "dependencies": {
+    "typescript": "^2.9.1"
   }
 }
