@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {},
-    "outDir": "out/",
+    "outDir": "./dist/",
+    "declaration": true,
     "allowSyntheticDefaultImports": true, // no errors on commonjs default import
     "allowJs": false, // include js files
     "emitDecoratorMetadata": true,
