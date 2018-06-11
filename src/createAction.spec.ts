@@ -35,15 +35,15 @@ describe('createAction', () => {
     const action: {
       type: 'ACTION';
       payload: { id: number };
-      error: boolean,
+      error: boolean;
       meta: { isFetched: boolean };
     } = createAction('ACTION', { id: 1 }, false, { isFetched: true });
 
     expect(action).toEqual({
-      type: 'ACTION',
-      payload: { id: 1 },
       error: false,
       meta: { isFetched: true },
+      payload: { id: 1 },
+      type: 'ACTION',
     });
   });
 });

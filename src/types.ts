@@ -1,6 +1,6 @@
-export type ActionType = string
+export type ActionType = string;
 
-export interface BaseAction<T extends string>{
+export interface BaseAction<T extends string> {
   type: T;
 }
 
@@ -15,4 +15,3 @@ export interface Meta<M> {
 export interface ActionError<E> {
   error: E;
 }
-

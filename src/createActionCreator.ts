@@ -11,8 +11,8 @@ import { ActionType } from './types';
 //       : (payload: P, error: E, meta?: M) => StandardAction<T,P,E,M>
 //     : (payload: P, error: E, meta: M) => StandardAction<T,P,E,M>
 
-export function createActionCreator<P = undefined, E = undefined, M = undefined>(type: ActionType): any{
-  return (payload: P, error: E,meta: M) => createAction(type, payload, error, meta)
+export function createActionCreator<P = undefined, E = undefined, M = undefined>(type: ActionType): any {
+  return (payload: P, error: E, meta: M) => createAction(type, payload, error, meta);
 }
 
 // const a = createActionCreator<{id: string}>('HELLO')({id: 'ds'})
