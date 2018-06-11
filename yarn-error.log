@@ -1,0 +1,78 @@
+Arguments: 
+  /usr/local/Cellar/node/10.0.0/bin/node /usr/local/Cellar/yarn/1.6.0/libexec/bin/yarn.js version
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin
+
+Yarn version: 
+  1.6.0
+
+Node version: 
+  10.0.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/damianpaszkowski/Documents/action-ts/package.json: Unexpected token } in JSON at position 1159
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.6.0/libexec/lib/cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.6.0/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.6.0/libexec/lib/cli.js:109:13
+
+npm manifest: 
+  {
+    "name": "action-ts",
+    "version": "0.0.6",
+    "description": "Awesome type safe actions",
+    "author": "Damian Paszkowski",
+    "keywords": [
+      "redux",
+      "redux-actions",
+      "type safe actions",
+      "flux architecture",
+      "flux",
+      "typescript actions"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/paszkowskiDamian/actions-ts"
+    },
+    "license": "MIT",
+    "source": "src/index.ts",
+    "types": "dist/index.d.ts",
+    "main": "dist/action-ts.js",
+    "module": "dist/action-ts.esm.js",
+    "browser": "dist/action-ts.umd.js",
+    "scripts": {
+      "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+      "lint": "tslint --project './tsconfig.json'",
+      "build": "microbundle -o ./build --strict",
+      "rebuild": "rm -rf ./build && npm run build",
+      "dev": "microbundle watch",
+      "test": "jest --config jest.config.json ./src",
+      "test:watch": "jest --config jest.config.json --watch ./src",
+      "prepare" : "npm run rebuild",
+      "prepublishOnly" : "npm test && npm run lint",
+      "preversion" : "npm run lint",
+      "version" : "npm run format && git add -A src",
+      "postversion" : "git push && git push --tags",
+    },
+    "devDependencies": {
+      "@types/jest": "^23.0.0",
+      "jest": "^23.1.0",
+      "microbundle": "^0.4.4",
+      "prettier": "^1.13.5",
+      "ts-jest": "^22.4.6",
+      "tslint": "^5.10.0",
+      "tslint-config-prettier": "^1.13.0",
+      "typescript": "^2.9.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

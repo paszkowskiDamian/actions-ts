@@ -1,18 +1,26 @@
 {
   "name": "action-ts",
   "version": "0.0.6",
-  "description": "",
+  "description": "Awesome type safe actions",
   "author": "Damian Paszkowski",
+  "keywords": [
+    "redux",
+    "redux-actions",
+    "type safe actions",
+    "flux architecture",
+    "flux",
+    "typescript actions"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/paszkowskiDamian/actions-ts"
   },
   "license": "MIT",
   "source": "src/index.ts",
-  "types": "./dist/index.d.ts",
-  "main": "./dist/action-ts.js",
-  "module": "./dist/action-ts.esm.js",
-  "browser": "./dist/action-ts.umd.js",
+  "types": "dist/index.d.ts",
+  "main": "dist/action-ts.js",
+  "module": "dist/action-ts.esm.js",
+  "browser": "dist/action-ts.umd.js",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint --project './tsconfig.json'",
@@ -20,7 +28,12 @@
     "rebuild": "rm -rf ./build && npm run build",
     "dev": "microbundle watch",
     "test": "jest --config jest.config.json ./src",
-    "test:watch": "jest --config jest.config.json --watch ./src"
+    "test:watch": "jest --config jest.config.json --watch ./src",
+    "prepare" : "npm run rebuild",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
   "devDependencies": {
     "@types/jest": "^23.0.0",
