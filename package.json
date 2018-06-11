@@ -1,9 +1,12 @@
 {
   "name": "action-ts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "author": "Damian Paszkowski",
-  "repository": "https://github.com/paszkowskiDamian/actions-ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paszkowskiDamian/actions-ts"
+  },
   "license": "MIT",
   "source": "src/index.ts",
   "types": "./dist/index.d.ts",
@@ -11,6 +14,7 @@
   "module": "./dist/action-ts.esm.js",
   "browser": "./dist/action-ts.umd.js",
   "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint --project './tsconfig.json'",
     "build": "microbundle -o ./build --strict",
     "rebuild": "rm -rf ./build && npm run build",
