@@ -1,23 +1,27 @@
 {
   "name": "action-ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
-  "main": "index.js",
   "author": "Damian Paszkowski",
   "repository": "https://github.com/paszkowskiDamian/actions-ts",
   "license": "MIT",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
   "scripts": {
     "lint": "tslint --project './tsconfig.json'",
-    "build": "microbundle",
+    "build": "microbundle -o ./build",
     "dev": "microbundle watch",
     "test": "jest --config jest.config.json ./src",
     "test:watch": "jest --config jest.config.json --watch ./src"
   },
   "devDependencies": {
-    "microbundle": "^0.4.4",
-    "typescript": "^2.9.1"
+    "microbundle": "^0.4.4"
   },
   "dependencies": {
+    "typescript": "^2.9.1",
     "@types/jest": "^23.0.0",
     "jest": "^23.1.0",
     "prettier": "^1.13.5",

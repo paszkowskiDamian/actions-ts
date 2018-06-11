@@ -1,1 +1,8 @@
+#dependencies
 /node_modules
+
+#custom 
+.rpt2_cache
+
+#build
+/build
